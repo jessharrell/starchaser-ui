@@ -16,24 +16,24 @@
     color: lawngreen;
 }
 
-.flex-vertical {
+.flexVertical {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.flex-horizontal {
+.flexHorizontal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.character-card {
+.characterCard {
     margin: 1.5rem;
     padding: 1.5rem;
     color: white;
-    border: 1px solid #eaeaea;
+    border: 1px solid white;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
     width: 45%;

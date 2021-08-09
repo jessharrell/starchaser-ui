@@ -24,34 +24,33 @@ export default function SelectCharacter() {
                 setError(true);
             }
             setLoading(false);
+            console.log("done loading...");
+            console.log("CharactersResponse:");
+            console.log(charactersResponse);
         });
     };
 
     if (isLoading) {
         return <div className={styles.container}><p>Loading Characters...</p></div>;
     }
-    else {
-        if (hasError) {
-            return (
-                <div className={getCombinedStyles(styles.container, styles.flexVertical)}>
-                    <p>Game is Broken</p>
-                    <Link href="/">
-                        <a className={styles.clickable}>Restart</a>
-                    </Link>
-                </div>
-            )
-        }
+    if (hasError) {
         return (
-            <div className={getCombinedStyles(styles.container, styles.flexHorizontal)}>
-                { characters.map(character =>
-                    {
-                        return
-                            <div className={styles.characterCard}>
-                                <h2>{character.name}</h2>
-                            </div>
-                    }
-                )}
+            <div className={getCombinedStyles(styles.container, styles.flexVertical)}>
+                <p>Game is Broken</p>
+                <Link href="/">
+                    <a className={styles.clickable}>Restart</a>
+                </Link>
             </div>
         )
     }
+    return (
+        <div className={getCombinedStyles(styles.container, styles.flexHorizontal)}>
+            { characters.map(character => (
+                        <div key={character.name} className={styles.characterCard}>
+                            <h2>{character.name}</h2>
+                        </div>
+                )
+            )}
+        </div>
+    )
 }
