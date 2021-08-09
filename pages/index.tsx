@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -13,9 +14,11 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Star Chaser
         </h1>
-        <link href="/GameSetup/SelectCharacter" className={styles.card}>
-          <h2>Select a character to begin your journey</h2>
-        </link>
+          <div className={styles.card}>
+            <Link href="/gameSetup/selectCharacter" >
+                <a>Select a character to begin your journey</a>
+            </Link>
+          </div>
       </main>
     </div>
   )

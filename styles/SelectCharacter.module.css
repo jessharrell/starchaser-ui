@@ -1,0 +1,54 @@
+.container {
+    min-height: 100vh;
+    height: 100vh;
+    background-color: black;
+}
+
+.container p,
+.container a,
+.container h2 {
+    color: white;
+}
+
+.clickable:hover,
+.clickable:focus,
+.clickable:active {
+    color: lawngreen;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-card {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    width: 45%;
+}
+
+.character-card:hover,
+.character-card:focus,
+.character-card:active {
+    border-color: lawngreen;
+}
+
+.loading{
+    background-color: black;
+}
+
+.loading p {
+    color: white;
+}
