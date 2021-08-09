@@ -48,6 +48,7 @@ export default function SelectCharacter() {
             { characters.map(character => (
                         <div key={character.name} className={styles.characterCard}>
                             <h2>{character.name}</h2>
+                            <span>{character.bio}</span>
                         </div>
                 )
             )}

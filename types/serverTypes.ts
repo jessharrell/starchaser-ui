@@ -9,7 +9,7 @@ export namespace serverTypes{
         id: number,
         name: string,
         health: number,
-        biography: string,
+        bio: string,
         planet: Planet
     }
 }
